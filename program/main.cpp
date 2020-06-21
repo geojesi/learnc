@@ -20,7 +20,12 @@ int main()
     for (int i = 0; i < len1; i++)
     {
         if (a[i] == 1)
-            cnt += f(len1 - i + 1);
-
+            cnt += f(len1 - i - 1);
     }
+    for (int i = 0; i < len2; i++)
+    {
+        if (b[i] == 1)
+            cnt += f(len2 - i - 1);
+    }
+    printf("%d", cnt);
 }
